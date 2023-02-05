@@ -18,8 +18,9 @@ kubectl get all -l app.kubernetes.io/name=aws-ebs-csi-driver -n kube-system
 
 - CSI Driver Installation
 ```
-chmod +x csidriver.sh
-bash -uvx csidriver.sh
+chmod +x csi-driver.sh
+
+bash -uvx csi-driver.sh
 ```
 
 
