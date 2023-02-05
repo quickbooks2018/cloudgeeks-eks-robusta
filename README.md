@@ -97,11 +97,15 @@ bash -uvx kind-cluster.sh
 - export Cluster Name
 ```
 export CLUSTER_NAME='kind-cloudgeeks'
+export KUBECONFIG=~/Desktop/kind/kind
 ```
 
 
 ```kind-robusta
 helm install robusta robusta/robusta -f ./generated_values.yaml \
+    --namespace monitoring \
+    --create-namespace \
+    --wait \
     --set clusterName=${CLUSTER_NAME} \
     --set kube-prometheus-stack.coreDns.enabled=false \
     --set kube-prometheus-stack.kubeControllerManager.enabled=false \
