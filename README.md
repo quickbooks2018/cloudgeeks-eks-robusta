@@ -29,18 +29,11 @@ bash -uvx csi-driver.sh
 export CLUSTER_NAME='cloudgeeks-eks-dev'
 ```
 
-- generated_values.yaml
-
-- Robusta Official
-
-- values.yaml
-
-- https://github.com/robusta-dev/robusta/blob/master/helm/robusta/values.yaml
-
-
 - Install Robusta with Helm
 
 - https://docs.robusta.dev/master/installation.html
+
+- Generate generated_values.yaml (Make sure Docker Daemon is running)
 
 ```bash
 curl -fsSL -o robusta https://docs.robusta.dev/master/_static/robusta
@@ -66,6 +59,12 @@ helm upgrade --install \
 
 - Note: generated_values.yaml is Slack & Robusta UI Account Settings plus BuiltIn Powerful Alerting Rules
 
+- Robusta Official
+
+- values.yaml
+
+- https://github.com/robusta-dev/robusta/blob/master/helm/robusta/values.yaml
+
 - Add Custom Alerting Rules in values.yaml
 ```
 helm upgrade --install \
@@ -81,7 +80,6 @@ helm upgrade --install \
 - https://github.com/robusta-dev/kubernetes-demos
 
 - Crashing Pods Demo
-```
 ```crash
 kubectl apply -f https://gist.githubusercontent.com/robusta-lab/283609047306dc1f05cf59806ade30b6/raw
 ```
