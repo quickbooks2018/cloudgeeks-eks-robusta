@@ -97,7 +97,7 @@ bash -uvx kind-cluster.sh
 - export Cluster Name
 ```
 export CLUSTER_NAME='kind-cloudgeeks'
-export KUBECONFIG=~/Desktop/kind/kind
+xport KUBECONFIG=~/Desktop/kind/kinde
 ```
 
 
@@ -135,4 +135,10 @@ helm upgrade --install robusta robusta/robusta \
     --set kube-prometheus-stack.prometheusOperator.kubeletService.enabled=false \
     --values values.yaml \
     --wait
+```
+
+- kind cluster port forwarding with ssh tunnel
+```ssh-tunnel
+ssh -N -L 8443:0.0.0.0:8443 -i ~/.ssh/id_rsa cloud_user@<public-ip>
+xport KUBECONFIG=~/Desktop/kind/kind
 ```
