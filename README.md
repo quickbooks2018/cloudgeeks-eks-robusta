@@ -6,7 +6,7 @@
 
 - https://home.robusta.dev/
 
-- With EKS CSI driver is not install by default
+- EKS CSI driver is not install by default
 - https://aws.amazon.com/premiumsupport/knowledge-center/eks-troubleshoot-ebs-volume-mounts/
 
 - Verify that the Amazon EBS CSI driver controller and node pods are running
