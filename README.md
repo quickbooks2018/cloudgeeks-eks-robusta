@@ -65,7 +65,7 @@ helm upgrade --install \
 
 - https://github.com/robusta-dev/robusta/blob/master/helm/robusta/values.yaml
 
-- Add Custom Alerting Rules in values.yaml
+- Add Custom Alerting Rules in values-deployment.yaml
 ```
 helm upgrade --install \
     robusta robusta/robusta \
@@ -74,7 +74,7 @@ helm upgrade --install \
     --create-namespace \
     --wait \
     --set clusterName="${CLUSTER_NAME}" \
-    --values values.yaml
+    --values values-deployment.yaml
 ```
 - Robusta Demos
 - https://github.com/robusta-dev/kubernetes-demos
