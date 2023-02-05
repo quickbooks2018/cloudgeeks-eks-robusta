@@ -140,5 +140,6 @@ helm upgrade --install robusta robusta/robusta \
 - kind cluster port forwarding with ssh tunnel
 ```ssh-tunnel
 ssh -N -L 8443:0.0.0.0:8443 -i ~/.ssh/id_rsa cloud_user@<public-ip>
-xport KUBECONFIG=~/Desktop/kind/kind
+
+export KUBECONFIG=~/Desktop/kind/kind
 ```
