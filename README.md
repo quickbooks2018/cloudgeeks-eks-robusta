@@ -1,6 +1,6 @@
 # cloudgeeksca
 
-- cloudgeeks.ca
+- https://cloudgeeks.ca
 
 ### Robusta
 
