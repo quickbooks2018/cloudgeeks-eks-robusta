@@ -83,3 +83,32 @@ helm upgrade --install \
 ```crash
 kubectl apply -f https://gist.githubusercontent.com/robusta-lab/283609047306dc1f05cf59806ade30b6/raw
 ```
+
+
+- Kind Cluster
+```kind
+chmod +x kind-cluster.sh
+
+bash -uvx kind-cluster.sh
+```
+
+- kind Robusta
+
+- export Cluster Name
+```
+export CLUSTER_NAME='kind-cloudgeeks'
+```
+
+
+```kind-robusta
+helm install robusta robusta/robusta -f ./generated_values.yaml \
+    --set clusterName=${CLUSTER_NAME} \
+    --set kube-prometheus-stack.coreDns.enabled=false \
+    --set kube-prometheus-stack.kubeControllerManager.enabled=false \
+    --set kube-prometheus-stack.kubeDns.enabled=false \
+    --set kube-prometheus-stack.kubeEtcd.enabled=false \
+    --set kube-prometheus-stack.kubeProxy.enabled=false \
+    --set kube-prometheus-stack.kubeScheduler.enabled=false \
+    --set kube-prometheus-stack.nodeExporter.enabled=false \
+    --set kube-prometheus-stack.prometheusOperator.kubeletService.enabled=false
+```
