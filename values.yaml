@@ -6,9 +6,9 @@ customPlaybooks:
       namespace_prefix: default
   actions:
   - resource_babysitter:
-    omitted_fields: []
-    fields_to_monitor:
-    - spec.template.spec.containers[0].image
+     omitted_fields: []
+     fields_to_monitor:
+     - spec.template.spec.containers[0].image
 
 - triggers:
   - on_kubernetes_any_resource_all_changes:
