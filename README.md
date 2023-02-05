@@ -102,7 +102,7 @@ export KUBECONFIG=~/Desktop/kind/kind
 
 
 ```kind-robusta
-helm install robusta robusta/robusta -f ./generated_values.yaml \
+helm upgrade --install robusta robusta/robusta -f ./generated_values.yaml \
     --namespace monitoring \
     --create-namespace \
     --wait \
@@ -115,4 +115,24 @@ helm install robusta robusta/robusta -f ./generated_values.yaml \
     --set kube-prometheus-stack.kubeScheduler.enabled=false \
     --set kube-prometheus-stack.nodeExporter.enabled=false \
     --set kube-prometheus-stack.prometheusOperator.kubeletService.enabled=false
+```
+
+- Kind Custom Values.yaml
+
+```kind-robusta
+helm upgrade --install robusta robusta/robusta \
+    --values generated_values.yaml \
+    --namespace monitoring \
+    --create-namespace \
+    --set clusterName=${CLUSTER_NAME} \
+    --set kube-prometheus-stack.coreDns.enabled=false \
+    --set kube-prometheus-stack.kubeControllerManager.enabled=false \
+    --set kube-prometheus-stack.kubeDns.enabled=false \
+    --set kube-prometheus-stack.kubeEtcd.enabled=false \
+    --set kube-prometheus-stack.kubeProxy.enabled=false \
+    --set kube-prometheus-stack.kubeScheduler.enabled=false \
+    --set kube-prometheus-stack.nodeExporter.enabled=false \
+    --set kube-prometheus-stack.prometheusOperator.kubeletService.enabled=false \
+    --values values.yaml \
+    --wait
 ```
