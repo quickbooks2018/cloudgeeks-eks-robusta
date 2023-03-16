@@ -97,7 +97,7 @@ bash -uvx kind-cluster.sh
 - export Cluster Name
 ```
 export CLUSTER_NAME='kind-cloudgeeks'
-xport KUBECONFIG=~/Desktop/kind/kinde
+xport KUBECONFIG=~/Desktop/kind/config
 ```
 
 
