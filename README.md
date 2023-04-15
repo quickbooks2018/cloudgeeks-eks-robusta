@@ -25,7 +25,14 @@ bash -uvx csi-driver.sh
 
 
 - export Cluster Name
+
+- Fina a Cluster Name
+
+```clustername
+kubectl config current-context
 ```
+
+```cluster
 export CLUSTER_NAME='cloudgeeks-eks-dev'
 ```
 
