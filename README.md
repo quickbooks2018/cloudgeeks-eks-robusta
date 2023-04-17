@@ -26,7 +26,7 @@ bash -uvx csi-driver.sh
 
 - export Cluster Name
 
-- Fina a Cluster Name
+- Find a Cluster Name
 
 ```clustername
 kubectl config current-context
